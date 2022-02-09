@@ -188,9 +188,11 @@ img {
   bottom: 1rem;
   background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
   width: 90%;
-  border-radius: 1rem 2.25rem;
+  border-radius: 2.25rem;
   padding: 1rem 2.25rem;
   backdrop-filter: blur(10px);
+  left: 5%;
+  right: 5%;
 }
 
 .nav_list {
@@ -217,7 +219,9 @@ img {
   box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
 }
 /* Change background header */
-
+.scroll-header {
+  box-shadow: 0 4px 4px hsla(0, 0%, 4%, 0.3);
+}
 /*=============== HOME ===============*/
 .home_container {
   position: relative;
@@ -394,30 +398,98 @@ img {
   margin-bottom: 2rem;
 }
 /*=============== SKILLS ===============*/
+.skills__container {
+  row-gap: 2rem;
+  padding-top: 1rem;
+}
+
+.skills__content {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+}
+
+.skills__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills__box {
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.skills__group {
+  display: grid;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+.skills__data {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.skills .bxs-badge-check {
+  font-size: 1rem;
+  color: var(--first-color);
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+}
+
+.skills__level {
+  font-size: var(--tiny-font-size);
+}
 
 /*=============== SERVICES ===============*/
+.services__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
 
-/* Services modal */
+.services__card {
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+}
 
-/*Active modal*/
+.services__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 2.5rem;
+}
 
-/*=============== WORK ===============*/
+.services__button {
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  cursor: pointer;
+}
 
-/* Active item work*/
+.services__button:hover .services__icon {
+  transform: translateX(0.25rem);
+}
 
-/*=============== TESTIMONIAL ===============*/
+.services__icon {
+  font-size: 1rem;
+  transition: 0.4s;
+}
 
-/* Swiper class */
-
+/* Services modal */ /*Active modal*/
+/*=============== WORK ===============*/ /* Active item work*/
+/*=============== TESTIMONIAL ===============*/ /* Swiper class */
 /*=============== CONTACT ===============*/
-
 /*=============== FOOTER ===============*/
-
 /*=============== SCROLL BAR ===============*/
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-
-/* For medium devices */
-
-/* For large devices */ ;
+/*=============== BREAKPOINTS ===============*/ /* For small devices */
+/* For medium devices */ /* For large devices */ ;
