@@ -694,3 +694,15 @@ body.light-theme {
 
 /* For medium devices */
 /* For large devices */
+@media screen and (min-width: 968px) {
+  .nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav__menu {
+    width: 968px;
+    left: auto;
+    right: auto;
+  }
+} ;
