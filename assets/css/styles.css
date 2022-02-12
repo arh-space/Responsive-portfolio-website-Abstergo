@@ -173,17 +173,17 @@ img {
   align-items: center;
 }
 
-.nav_logo {
+.nav__logo {
   color: var(--first-color);
   font-weight: var(--font-medium);
   transition: 0.4s;
 }
 
-.nav_logo:hover {
+.nav__logo:hover {
   color: var(--first-color-alt);
 }
 
-.nav_menu {
+.nav__menu {
   position: fixed;
   bottom: 1rem;
   background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
@@ -195,13 +195,13 @@ img {
   right: 5%;
 }
 
-.nav_list {
+.nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav_link {
+.nav__link {
   color: var(--text-color);
   font-size: 1.25rem;
   padding: 0.4rem;
@@ -210,7 +210,7 @@ img {
 }
 
 /* Active link */
-.active_link {
+.active__link {
   background: linear-gradient(
     180deg,
     hsla(var(--first-hue), var(--sat), var(--lig), 1),
@@ -585,8 +585,23 @@ img {
   margin-top: 4rem;
   color: var(--container-color);
   text-align: center;
-  font-size: var(--smaller-font-size)
+  font-size: var(--smaller-font-size);
+}
 
 /*=============== SCROLL BAR ===============*/
-/*=============== BREAKPOINTS ===============*/ /* For small devices */
-/* For medium devices */ /* For large devices */ ;
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--second-hue), 8%, 38%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--second-hue), 8%, 26%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--second-hue), 8%, 20%);
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */ /* For medium devices */ /* For large devices */ ;
