@@ -132,12 +132,63 @@ body.light-theme {
     Color changes in some parts of 
     the website, in light theme
 ==========*/
+.light-theme .scroll-header {
+  box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);
+}
+
+.light-theme .nav__menu {
+  background-color: hsl(var(--second-hue), 32%, 90%, 0.8);
+}
+
+.light-theme .section__subtitle {
+  color: var(--text-color);
+}
+
+.light-theme .home__social-link {
+  box-shadow: 0 2px 8px hsl(var(--second-hue), 48%, 8%, 0.1);
+}
+
+.light-theme .home__social::after,
+.light-theme .footer__social-link {
+  background-color: var(--title-color);
+}
+
+.light-theme .home__social-link,
+.light-theme .home__scroll,
+.light-theme .button,
+.light-theme .button:hover,
+.light-theme .active__link,
+.light-theme .footer__title,
+.light-theme .footer-social,
+.light-theme .footer__copy {
+  color: var(--title-color);
+}
+
+.light-theme .about__box {
+  box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
+}
+
+.light-theme .skills__content,
+.light-theme .contact__card {
+  box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
+}
+
+.light-theme::-webkit-scrollbar {
+  background-color: hsl(var(--second-hue), 8%, 66%);
+}
+
+.light-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--second-hue), 8%, 54%);
+}
+
+.light-theme::-webkit-scrollbar:hover {
+  background-color: hsl(var(--second-hue), 8%, 44%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 auto;
 }
 
 .grid {
@@ -147,6 +198,8 @@ body.light-theme {
 
 .main {
   overflow: hidden;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .section {
@@ -178,6 +231,7 @@ body.light-theme {
   width: 100%;
   background-color: var(--body-color);
   z-index: var(--z-fixed);
+  transition: 0.4s;
 }
 
 .nav {
@@ -185,6 +239,8 @@ body.light-theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .nav__logo {
@@ -231,6 +287,7 @@ body.light-theme {
     hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
   );
   box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
+  color: var(--title-color);
 }
 /* Change background header */
 .scroll-header {
@@ -291,19 +348,19 @@ body.light-theme {
   gap: 1.5rem;
 }
 
-.home_social,
-.home_scroll {
+.home__social,
+.home__scroll {
   position: absolute;
 }
 
-.home_social {
+.home__social {
   bottom: 5rem;
   left: 0;
   display: grid;
   row-gap: 0.5rem;
 }
 
-.home_social-link {
+.home__social-link {
   width: max-content;
   background-color: var(--container-color);
   color: var(--first-color);
@@ -314,12 +371,12 @@ body.light-theme {
   transition: 0.4s;
 }
 
-.home_social-link:hover {
+.home__social-link:hover {
   background-color: var(--first-color);
   color: #fff;
 }
 
-.home_social::after {
+.home__social::after {
   content: "";
   width: 32px;
   height: 32px;
@@ -327,7 +384,7 @@ body.light-theme {
   transform: rotate(90deg) translate(16px, 3px);
 }
 
-.home_scroll {
+.home__scroll {
   color: var(--first-color);
   right: -1.5rem;
   bottom: 4rem;
@@ -336,11 +393,11 @@ body.light-theme {
   justify-items: center;
 }
 
-.home_scroll-icon {
+.home__scroll-icon {
   font-size: 1.25rem;
 }
 
-.home_scroll-name {
+.home__scroll-name {
   font-size: var(--small-font-size);
   transform: rotate(-90deg);
 }
@@ -392,6 +449,7 @@ body.light-theme {
 .about__box {
   background-color: var(--container-color);
   border-radius: 0.75rem 0.5rem;
+  padding: 1rem;
 }
 
 .about__icon {
@@ -582,7 +640,7 @@ body.light-theme {
 .footer__social {
   display: flex;
   justify-content: center;
-  column-gap: 5rem;
+  column-gap: 3rem;
 }
 
 .footer__social-link {
@@ -618,4 +676,21 @@ body.light-theme {
   background-color: hsl(var(--second-hue), 8%, 20%);
 }
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */ /* For medium devices */ /* For large devices */ ;
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .home_buttons {
+    display: grid;
+  }
+
+  .home__social,
+  .home__scroll-name {
+    display: none;
+  }
+
+  .about__info {
+    grid-template-columns: none;
+  }
+}
+
+/* For medium devices */
+/* For large devices */
