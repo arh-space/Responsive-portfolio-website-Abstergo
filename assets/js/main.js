@@ -2,14 +2,6 @@
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
-/*=============== SERVICES MODAL ===============*/
-
-/*=============== MIXITUP FILTER PORTFOLIO ===============*/
-
-/* Link active work */
-
-/*=============== SWIPER TESTIMONIAL ===============*/
-
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const section = document.querySelectorAll("section[id]");
 
